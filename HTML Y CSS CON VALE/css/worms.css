@@ -1,0 +1,32 @@
+.worm_bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.worms {
+    display: flex;
+    position: absolute; 
+}
+
+.segment {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.float {
+    animation-name: flotante;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+   
+}
+
+
+@keyframes flotante {
+0% {transform: translateY(0px);}
+50% {transform: translateY(-20px);}
+100% {transform: translateY(0px);}
+}

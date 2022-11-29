@@ -1,0 +1,149 @@
+.navbar {
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    transition: background-color 250ms, height 250ms;
+}
+
+.nav-bg {
+    background-color: hsl(218, 24%, 70%);
+}
+
+.logo {
+    display: flex;
+    width: 30%;
+    padding: 10px 0px 10px 0px;
+}
+
+.img_logo {
+    background: hsl(218, 24%, 90%);
+    border-radius: 50%;
+    padding: 3px;
+    margin-left: 20px;
+    height: 50px;
+}
+
+.img_logo:hover {
+    opacity: 0.8;
+}
+
+.content_nav {
+    display: none;
+}
+
+.show_nav {
+    display: none;
+}
+
+.nav_buttons {
+    display: flex;
+    padding: 10px 0px 10px 0px;
+}
+
+.nav_link {
+    position: relative;
+}
+
+.nav_link:hover .dropdown {
+    visibility: visible;
+    transform: scaleX(1);
+    transition-duration: 250ms;
+}
+
+.nav_link > a {
+    display: flex;
+    background: hsl(218, 24%, 90%);
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.nav_link > a:hover {
+    background: hsl(218, 24%, 100%);
+}
+
+.dropdown {
+    visibility: none;
+    transform: scaleX(0);
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    background: hsl(218, 24%, 90%);
+    border-top: 3px solid black;
+    padding: 5px;
+}
+
+.dropdown > a {
+    width: 300px;
+    padding: 10px;
+    background: hsl(218, 24%, 70%);
+    margin: 2px;
+}
+
+.dropdown > a:hover {
+    background: hsl(218, 24%, 80%);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color: hsl(218, 24%, 70%);
+        overflow: hidden;
+    }
+    .content_nav {
+        display: flex;
+        width: 70%;
+        justify-content: end;
+        padding: 10px 0px 10px 0px;
+    }
+    .show_nav {
+        display: flex;
+        background: lightgray;
+        padding: 0;
+        margin-right: 20px;
+        border: 2px solid black;
+        border-radius: 3px;
+    }
+    .show_nav > img {
+        width: 30px;
+        height: 30px;
+    }
+    .show_nav > img:active {
+        background: gray;
+    }
+    .nav_buttons {
+        flex-wrap: wrap;
+        margin: 0;
+        width: 90%;
+        padding: 10px 0px 10px 0px;
+    }
+    .nav_link {
+        width: 100%;
+        margin-bottom: 5px;
+        justify-content: center;
+        transform: translateX(-100vh);
+        animation-fill-mode: forwards;
+        animation-duration: 500ms;
+    }
+    @keyframes slideIn {
+        0% {transform: translateX(-100vh);}
+        100% {transform: translateX(0px);}
+    }
+    .nav_link > a {
+        margin-right: 0;
+    }
+    .dropdown {
+        border: none;
+        background: none;
+        position: static;
+        transform: scaleX(1);
+        justify-content: center;
+    }
+    .dropdown > a {
+        width: 90%;
+    }
+}

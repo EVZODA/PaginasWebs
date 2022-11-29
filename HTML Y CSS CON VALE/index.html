@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paginarda</title>
+
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/carrousel.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/worms.css">
+    <link rel="stylesheet" href="css/stars.css">
+    <link rel="stylesheet" href="css/rain.css">
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!--Cabecera-->
+
+    <header> 
+        <nav class="navbar">
+            <div class="logo"> 
+                <a href="index.html">
+                    <img class="img_logo" src="img/start.webp"></img>
+                </a>
+            </div>
+            <div class="content_nav">
+                <button class="show_nav" onclick="boton()">
+                    <img src="img/expNav.webp" alt="">
+                </button>
+            </div>
+            <div id="nav_buttons" class="nav_buttons">
+                <div class="nav_link">
+                    <a href="#section1">Juegos</a>
+                    <div class="dropdown">
+                        <a onclick="mostrar_juego(0)" href="javascript:;">Godlike Burguer</a>
+                        <a onclick="mostrar_juego(1)" href="javascript:;">Counter-Strike: Global Offensive</a>
+                        <a onclick="mostrar_juego(2)" href="javascript:;">For the King</a>
+                        <a onclick="mostrar_juego(3)" href="javascript:;">Sekiro: Shadows die twice</a>
+                        <a onclick="mostrar_juego(4)" href="javascript:;">Elder Ring</a>
+                    </div>
+                </div>
+                <div class="nav_link">
+                    <a onclick="boton()" href="#section2">¿Quienes somos?</a>
+                </div>
+                <div class="nav_link">
+                    <a onclick="boton()" href="#aside">Ofertas</a>
+                </div>
+                <div class="nav_link">
+                    <a onclick="boton()" href="#formulario">Formulario</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!--Contenido principal-->
+    
+    <section class="home">
+        <div class="worm_bg">
+            
+        </div>
+        <h1>Random</h1>
+        <h2>Page</h2>
+    </section>
+    <main>
+
+        <!-- seccion 1 -->
+        
+        <section class="game_section">
+            <div class="star_bg"></div>
+            
+            <h2 id="section1" class="subtitle">Juegos</h2>
+            <div class="container_card">
+                <a class="show_info" href="javascript:;">
+                    <article class="card">
+                        <div class="card_anim"></div>
+                        <img src="img/godlike_burguer.jpg" alt="chocolate">
+                        <p>Godlike Burguer</p>
+                    </article>
+                </a>
+            </div>
+            <div class="container_card">
+                <a class="show_info" href="javascript:;">
+                    <article class="card">
+                        <div class="card_anim"></div>
+                        <img src="img/csgo.jpg" alt="chocolate">
+                        <p>Counter Strike: Global Offensive</p>
+                    </article>
+                </a>
+            </div> 
+            <div class="container_card">
+                <a class="show_info" href="javascript:;">
+                    <article class="card">
+                        <div class="card_anim"></div>
+                        <img src="img/for_the_king.jpg" alt="chocolate">
+                        <p>For the king</p>
+                    </article>
+                </a>
+            </div> 
+            <div class="container_card">
+                <a class="show_info" href="javascript:;">
+                    <article class="card">
+                        <div class="card_anim"></div>
+                        <img src="img/shadows_die_twice.jpg" alt="chocolate">
+                        <p>Sekiro: Shadows Die Twice</p>
+                    </article>
+                </a>
+            </div> 
+            <div class="container_card">
+                <a class="show_info" href="javascript:;">
+                    <article class="card">
+                        <div class="card_anim"></div>
+                        <img src="img/elden_ring.jpg" alt="chocolate">
+                        <p>Elden Ring</p>
+                    </article>
+                </a>
+            </div> 
+        </section>
+
+ <!--Informacion relacionada con el contenido principal-->
+        <aside>
+            <div id="aside" class="offers">
+                <h3>OFERTAS</h3>
+                <img src="img/forza_horizon.jpg" alt="">
+                <p>¡Tu Ultimate Horizon Adventure te espera! Explora los paisajes vibrantes y de mundo abierto de México conduciendo cientos de los mejores autos del mundo en un sinfín de diversión. ¡Comienza tu Horizon Adventure hoy y añade cosas a tu lista de deseos!</p>
+            </div>
+        </aside>    
+
+        <!-- descripción de juegos -->
+
+        <section class="selected_game">
+            <h2 id="section2" class="subtitle">Descripcion Juegos</h2>
+            <article id="game1" class="game">
+                <div class="img_game">
+                    <img src="img/godlike_burguer.jpg" alt=""> 
+                </div>
+                <div class="p_game">
+                    <p>In Godlike Burger you run the craziest restaurant of the galaxy! Stun, poison and kill customers in many devious ways… and turn them into burg</p> 
+                </div>
+            </article>
+            <article id="game2" class="game">
+                <div class="img_game">
+                    <img src="img/csgo.jpg" alt=""> 
+                </div>
+                <div class="p_game">
+                    <p>Counter-Strike: Global Offensive (CS:GO) amplía el juego de acción por equipos del que fue pionera la franquicia cuando salió hace 19 años. CS:GO trae nuevos mapas, personajes, armas y modos de juego, y ofrece versiones actualizadas del contenido clásico de CS (de_dust2, etc.).</p> 
+                </div>
+            </article>            
+            <article id="game3" class="game">
+                <div class="img_game">
+                    <img src="img/for_the_king.jpg" alt=""> 
+                </div>
+                <div class="p_game">
+                    <p>Explore the mysterious Jungle Falls and uncover the secrets of an ancient civilization in this thrilling adventure pack. Includes the new jungle realm, arena battles, wands and dual wielding, two new playable characters, and tons of unique enemies and loot. For The King is a challenging blend of Strategy, JRPG Combat, and Roguelike elements. Each play through is made unique with procedural maps, quests, and events. Brave the relentless elements, fight the wicked creatures, sail the seas and delve into the dark underworld. None before you have returned from their journey. Will you be the one to put an end to the Chaos?</p>
+                </div>
+            </article>
+            <article id="game4" class="game">
+                <div class="img_game">
+                    <img src="img/shadows_die_twice.jpg" alt=""> 
+                </div>
+                <div class="p_game">
+                    <p>En Sekiro™: Shadows Die Twice encarnas al 'lobo manco', un guerrero desfigurado y caído en desgracia que ha sido rescatado al borde de la muerte. Tras jurar proteger a un joven señor descendiente de un antiguo linaje, te conviertes en el objetivo de despiadados enemigos, entre ellos el peligroso clan Ashina. Cuando el joven señor es capturado, nada te detendrá en tu peligrosa aventura por restituir tu honor, ni siquiera la muerte.</p>  
+                </div>
+            </article>                
+            <article id="game5" class="game">
+                <div class="img_game">
+                    <img src="img/elden_ring.jpg" alt="">
+                </div>
+                <div class="p_game">
+                    <p>EL NUEVO RPG DE ACCIÓN DE FANTASÍA. Levántate, tiznado, y déjate guiar por la gracia para esgrimir el poder del Anillo de Elden y convertirte en un Señor de Elden en las Tierras Intermedias.</p>    
+                </div>
+            </article>          
+        </section>
+
+        <!-- carrousel -->
+
+        <section class="section_carrousel">
+            <div class="carrousel">
+                <div class="big">
+                    <img src="img/romero.webp" alt="" class="img">
+                    <img src="img/macheton.jpg" alt="" class="img">
+                </div>
+                <ul class="dots">
+                    <li class="dot active"></li>
+                    <li class="dot"></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- quienes somos -->
+        
+        <section class="about_us">
+            <h2 id="section3" class="subtitle">¿Quienes somos?</h2>
+            <div class="container_about_us">
+                <img></img>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias saepe, qui autem quo ipsa labore dignissimos excepturi soluta neque, tempore placeat cupiditate asperiores odio repellat minima perferendis doloremque ipsam sint, harum illo tenetur tempora doloribus deleniti. Ratione natus expedita harum dolorum ullam obcaecati molestiae temporibus mollitia doloremque distinctio. Qui velit enim perferendis aliquam ut blanditiis at exercitationem hic iusto, iste modi nemo magni nobis impedit totam dolorum nam doloremque. Officiis ut obcaecati, quos cumque dolorem adipisci deserunt, unde, natus vel harum sequi sint nulla voluptatibus. Voluptatum placeat debitis suscipit assumenda repudiandae ab ducimus? Tenetur eum non magnam, veritatis consectetur autem at nobis repudiandae natus in laboriosam ducimus iste ratione aliquid odit eos! Modi maxime dolor fugit rerum placeat aspernatur facere ipsam ratione repellendus, eum odio praesentium harum magnam recusandae atque similique assumenda voluptates dolores sunt laborum iste hic obcaecati. Iusto veniam nisi maxime culpa corrupti impedit labore eveniet cumque voluptatem in voluptas fuga repellendus sed optio atque, deleniti consequuntur perspiciatis rem beatae! Corporis reiciendis officia voluptas iste, obcaecati saepe natus consectetur quidem numquam debitis quos suscipit eum qui incidunt eos aliquam animi libero dignissimos alias fugit beatae ratione. Harum iure placeat fuga nostrum nulla nisi neque quaerat repellendus dolorum quasi?</p>
+        
+            </div>
+
+        </section>
+
+        <!-- tarjeta de clima -->
+        
+
+        <section class="weather">
+            <h1 class="weather-title">El clima y la hora ideal para jugar</h1>
+            <div class="rain_bg"></div>
+            <div class="card-clock-hours">
+                <div class="container-clock">
+                    <div class="container-day">
+                        <p class="day">WE</p>
+                        <p class="day-1">day</p>
+                    </div>
+                    :
+                    <div class="container-hours">
+                        <p class="hours"></p>
+                        <p class="hours-1">hours</p>
+                    </div>
+                    :
+                    <div class="container-minutes">
+                        <p class="minutes"></p>
+                        <p class="minutes-1">minutes</p>
+                    </div>
+                    :
+                    <div class="container-seconds">
+                        <p class="seconds"></p>
+                        <p class="seconds-1">seconds</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="weather-card">
+                <div class="weather-card-header">
+                    <img src="img/rain.png" alt="">
+                </div>
+                <div class="weather-card-stats">
+                    <p class="degrees">19º</p>
+                    <div class="location">
+                        <p class="weather-info">RAIN</p>
+                        <p class="country-state">New york, New york</p>
+                    </div>
+                </div>
+                <div class="weather-card-date">
+                    <p>1st Jan</p>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+    
+    <!--Pie de pagina--> 
+    <footer>
+        <form action="">
+            <div class="form_container" id="formulario">
+                <p>Formulario</p>
+                <input class="form_text" type="text" placeholder="Nombre">
+                <input class="form_text" type="text" placeholder="Apellido">
+                <input class="form_text" type="text" placeholder="Correo">
+                <textarea class="form_text big_text" placeholder="Cual es tu consulta?"></textarea>
+                <input class="form_send" type="submit" value="Enviar">
+            </div>
+        </form>
+        <div class="instagram">
+            <div class="circle"></div>
+            <div class="point"></div>
+        </div>
+        <p class="copyright">Copyright todos los derechos reservados</p>
+    </footer>
+    <script src="js/stars.js"></script>
+    <script src="js/rain.js"></script>
+    <script src="js/miScript.js"></script>
+    <script src="js/carrousel.js"></script>
+    <script src="js/worms.js"></script>
+    <script src="js/clock.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,137 @@
+header {
+    width: 100%;
+    background: linear-gradient(to bottom, hsl(0, 0%, 20%), var(--black));
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    transition: height 300ms;
+}
+
+.logo {
+    padding: 7px 0px 7px 0px;
+}
+
+.logo img {
+    height: 70px;
+    border-radius: 50%;
+}
+
+.burguer {
+    display: flex;
+    align-items: center;
+}
+
+.burguer-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.burguer-line {
+    width: 60%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: white;
+}
+
+.nav_menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav_item > a {
+    display: block;
+    color: white;
+    padding: 10px;
+    margin: 3px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.nav_item > a:hover {
+    background-color: hsla(0, 0%, 100%, 0.4);
+}
+
+/* menu desplegable escritorio desktop */
+.dropdown {
+    position: relative;
+    display: flex;
+    justify-content: end;
+}
+
+.dropdown > a::after {
+    content: ' ▼';
+    font-size: 16px;
+}
+
+
+.dropdown-menu {
+    position: absolute;
+    z-index: 1;
+    background-color: var(--white);
+    border-radius: 5px;
+    width: 190px;
+    height: 0px;
+    padding: 0px 3px 0px 3px;
+    overflow: hidden;
+    transition: all 0.3s;
+    transform: translateY(50px);
+}
+
+.dropdown-item a {
+    display: block;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.dropdown-item a:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .burguer-btn {
+        display: flex;
+        cursor: pointer;
+    }
+    .nav_menu {
+        width: 100%;
+        padding: 15px 0px 15px 0px;
+        flex-direction: column;
+    }
+    .nav_item {
+        transform: translateX(-100vh);
+        animation-fill-mode: forwards;
+        animation-duration: 1000ms;
+    }
+
+    .dropdown {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .dropdown-menu {
+        position: static;
+        transform: translateY(0px);
+    }
+
+    @keyframes slideIn {
+        0% {transform: translateX(-100vh);}
+        100% {transform: translateX(0px);}
+    }
+}

@@ -1,0 +1,37 @@
+@charset "UTF-8";
+/*----------------------------------------
+Estilos del diseño
+------------------------------------------*/
+.btn-primary {
+  background-color: #855F30 !important; }
+
+html {
+  font-size: 16px; }
+
+body {
+  color: #44484a !important;
+  font-family: 'Roboto', sans-serif !important; }
+
+.btn-dark {
+  background-color: #332718; }
+
+.card:hover {
+  box-shadow: 0 0 11px #855F30; }
+
+.bg-primary {
+  background-color: #9FBDCC !important; }
+
+footer {
+  background-color: #9FBDCC; }
+
+#imagenn:hover {
+  box-shadow: 0 0 10px #855F30; }
+
+/*----------------------------------------
+Media Queries
+------------------------------------------*/
+@media (min-width: 768px) {
+  html {
+    font-size: 16px; } }
+
+/*# sourceMappingURL=style.css.map */

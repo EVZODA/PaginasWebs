@@ -1,0 +1,44 @@
+.container {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card {
+    --card-size: 300px;
+    width: var(--card-size);
+    height: var(--card-size);
+    position: absolute;
+    display: flex;
+    background-color: white;
+    padding: 3px;
+    border-radius: 5px;
+    user-select: none;
+
+ 
+}
+
+
+.card > img {
+    width: 100%;
+}
+
+
+
+@keyframes movement {
+    0% {right: -300px;}
+    100% {right: calc((300px + 100vw))}
+}
+
+@media screen and (max-width: 768px) {
+    @keyframes movement {
+        0% {top: -300px;}
+        100% {top: calc((300px + 100vh))}
+    }
+}
+

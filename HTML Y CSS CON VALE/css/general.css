@@ -1,0 +1,567 @@
+/*Reset*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    background: hsl(218, 24%, 25%);
+}
+
+/*Contenido Principal*/
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.subtitle {
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+
+/* SECCION JUEGOS */
+
+.game_section {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content:space-around;
+    background-color: hsl(0, 0%, 5%);
+    z-index: 0;
+}
+
+.container_card {
+    display: flex;
+    width: 30%;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    opacity: 0.85;
+    width: 200px;
+    background: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.card > img, .card > p {
+    display: flex;
+    width: 100%;
+}
+
+.card > img {
+    height: 120px;
+    border-radius: 5px;
+}
+
+.card > p {
+    height: 60px;
+    border-top: 2px black solid;
+    margin: 10px 0px 0px 0px;
+    padding: 10px 0px 0px 0px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card > button {
+    border: none;
+    background: hsl(218, 24%, 70%);
+    text-decoration: none;
+    margin: 0;
+    padding: 10px;
+}
+
+.card_anim {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -10px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    transition-duration: 250ms;
+}
+
+.card:hover .card_anim {
+    animation-name: card_mouseover;
+    animation-duration: 1000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+}
+
+@keyframes card_mouseover {
+    0% {
+        box-shadow: 0px 0px 50px 100px hsla(0, 0%, 100%, 0.2);
+    }
+    100% {
+        box-shadow: 0px 0px 0px 5px hsla(0, 0%, 100%, 0.2);
+        height: 0%;
+        
+    }
+}
+
+/* JUEGO SELECCIONADO */
+
+.selected_game {
+    display: flex;
+    flex-wrap: wrap;
+    background:hsl(218, 24%, 40%);
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 0px;
+    margin: 15px 0px 15px 0px;
+    overflow: hidden;
+    transition: all 250ms;
+}
+
+.sg_active {
+    height: 250px;
+    padding-bottom: 20px;
+}
+.game {
+    display: none;
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.img_game {
+    display: flex;
+    width: 30%;
+    max-width: 250px;
+    align-items: center;
+    padding-right: 0px 10px 0px 0px;
+    margin: 0px 10px 0px 0px;
+    border-right: 2px black solid;
+}
+
+.img_game > img {
+    display: flex;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.p_game {
+    width: 70%;
+    max-height: 100px;
+    overflow-y: auto;
+    background-color: hsl(218, 24%, 60%);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.p_game > p {
+    display: flex;
+    width: 100%;
+}
+
+/* OFERTA */
+
+aside {
+    display: flex;
+    background: hsl(218, 24%, 40%);
+    padding: 20px;
+    width: 30%;
+    align-items: flex-start;
+}
+
+.offers {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.offers > h3 {
+    display: flex;
+    width: 100%;
+    color: white;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.offers > img {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px 3px black;
+}
+
+.offers > p {
+    color: white;
+}
+
+/* QUIENES SOMOS */
+
+.about_us{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+    padding-bottom: 40px;
+    background-color: hsl(218, 24%, 60%);
+}
+
+.about_us > h2 {
+    padding-top: 30px;
+    color: black;
+    z-index: 0;
+}
+
+.container_about_us{
+    z-index: 0;
+    display: flex;
+    width: 90%;
+    border: 2px solid black;
+    border-radius: 5px;
+    background: hsla(0, 0%, 100%, 0.5);
+    padding: 10px;
+}
+
+.container_about_us > p {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: rgb(0, 0, 0);
+}
+
+/* WEATHER */
+
+.weather-title{
+    text-align: center;
+    color: aliceblue;
+}
+
+.weather {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, hsl(208, 27%, 30%), hsl(208, 27%, 50%));
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: space-evenly;
+    font-family: 'Barlow', sans-serif;
+}
+
+.weather-card {
+    width: 400px;
+    height: 200px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 15px 30px -15px hsl(0, 0%, 3%);
+    display: flex;
+    justify-self: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.weather-card-header {
+    width: 100%;
+    height: 60%;
+    background-color: hsl(0, 0%, 97%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-card-header > img {
+    height: 70px;
+}
+
+.weather-card-stats {
+    width: 70%;
+    height: 40%;
+    background-color: black;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: white;
+    font-weight: 100;
+}
+
+.degrees {
+    font-size: 50px;
+    margin: 20px;
+}
+
+.weather-info {
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.country-state {
+    font-size: 12px;
+}
+
+.weather-card-date {
+    width: 30%;
+    height: 40%;
+    background-color: hsl(147, 69%, 65%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* Reloj */
+.card-clock-hours {
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 175px;
+    box-shadow: 0px 15px 30px -15px hsl(0, 0%, 3%);
+    background-color: black;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.container-clock {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    align-items: center;
+}
+
+.container-day, .container-hours, .container-minutes, .container-seconds {
+    display: flex;
+    flex-direction: column;
+    width: 23%;
+}
+
+.day, .hours, .minutes, .seconds {
+    text-align: center;
+    font-size: 48px;
+}
+
+.day-1, .hours-1, .minutes-1, .seconds-1 {
+    text-align: center;
+    font-size: 13px;
+}
+
+
+
+/* Pie de pagina */
+footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    background: hsl(180, 100%, 2%);
+    width: 100%;
+}
+
+
+footer > form {
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    margin-top: 20px;
+}
+
+.form_container {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    width: 100%;
+    max-width: 650px;
+    align-items: center;
+    font-family: 'Barlow', sans-serif;
+}
+
+.form_container > p {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.form_text {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+}
+
+.big_text {
+    word-wrap: break-word;
+    height: 100px;
+    resize: none;
+}
+
+.form_send {
+    width: 75%;
+    padding: 10px;
+    background: none;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: box-shadow 500ms, color 500ms;
+}
+
+.form_send:hover {
+    box-shadow: 0px 0px 10px 18px white inset;
+    color: black;
+}
+
+.form_send:active {
+    box-shadow: 0px 0px 10px 18px hsl(0, 0%, 80%) inset;
+    transition: none;
+}
+
+
+/* Pie de pagina (Logo de instagram) */
+.instagram {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+
+    width: 200px;
+    height: 200px;
+    border: 20px solid white;
+    border-radius: 50px;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border: 20px solid white;
+    border-radius: 50%;
+}
+
+.point {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    top: 8%;
+    right: 8%;
+}
+
+.copyright {
+    display: flex;
+    color: white;
+    margin: 20px 0px 20px 0px;
+    justify-content: center;
+    grid-column: span 2;
+}
+
+
+@keyframes choco {
+    0% {transform: translateY(-10px);}
+    50% {transform: translateY(0px);}
+    100% {transform: translateY(-10px);}
+}
+/*
+animation-name: choco;
+animation-duration: 250ms;
+animation-iteration-count: infinite;
+*/
+
+@media (max-width: 1000px) {
+
+    
+
+    footer {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        justify-self: center;
+    }
+
+    .container_card {
+        width: 50%;
+    }
+    footer > form {
+        width: 70%;
+    }
+    .copyright {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        justify-content: center;
+    }
+    .game_section {
+        width: 100%;
+        order: 1;
+    }
+    .selected_game {
+        order: 2;
+    }
+    .sg_active {
+        height: 400px;
+    }
+    .game {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .img_game {
+        padding: 0px 0px 10px 0px;
+        margin: 0px 0px 10px 0px;
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid black;
+    }
+    .p_game {
+        width: 100%;
+    }
+    aside {
+        width: 100%;
+        order: 0;
+    }
+    .about_us {
+        order: 4;
+    }
+
+    
+        .weather{
+            order: 5;
+        }
+
+    footer > form {
+        width: 80%;
+    }
+}
+
+@media (max-width: 450px) {
+    .container_card {
+        width: 100%;
+    }
+    footer > form {
+        width: 100%;
+    }
+}

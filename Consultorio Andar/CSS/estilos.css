@@ -1,0 +1,96 @@
+@charset "UTF-8";
+/*----------------------------------------
+Estilos del diseño
+------------------------------------------*/
+.btn-primary {
+  background-color: #855F30 !important; }
+
+.nav-item:hover{box-shadow: brown;}
+
+html {
+  font-size: 12px; }
+
+body {
+  background-color: #9FBDCC !important;
+  color: #44484a !important;
+  font-family: 'Roboto', sans-serif !important; }
+
+.btn-dark {
+  background-color: #332718; }
+
+.card:hover {
+  box-shadow: 0 0 11px #855F30; }
+
+.bg-primary {
+  background-color: rgb(159, 204, 200) !important; }
+
+footer {
+  background-color: #9FBDCC; }
+
+#imagenn:hover {
+  box-shadow: 0 0 10px #855F30; }
+
+.nav-link {
+  color: white; }
+
+.nav-link:hover {
+  color: dodgerblue; }
+
+  .social-bar {
+    position: fixed;
+    right: 0;
+    top: 35%;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 100;
+  }
+  
+  .icon {
+    color: white;
+    text-decoration: none;
+    padding: .7rem;
+    display: flex;
+    transition: all .5s;
+  }
+  
+  .icon-facebook {
+    background: #2E406E;
+  }
+  
+  .icon-twitter {
+    background: #339DC5;
+  }
+  
+  .icon-youtube {
+    background: #E83028;
+  }
+  
+  .icon-instagram {
+    background: #3F60A5;
+  }
+  
+  .icon:first-child {
+    border-radius: 1rem 0 0 0;
+  }
+  
+  .icon:last-child {
+    border-radius: 0 0 0 1rem;
+  }
+  
+  .icon:hover {
+    padding-right: 3rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.42);
+  }
+  
+
+/*----------------------------------------
+Media Queries
+------------------------------------------*/
+@media (min-width: 768px) {
+  html {
+    font-size: 16px; } }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,55 @@
+//--------------------------------------
+// PATRON DE COLORES
+//--------------------------------------
+$azul: #9FBDCC;
+$gris: #44484a;
+$primary: #855F30;
+$botontargeta:#332718;
+
+/*----------------------------------------
+Estilos del diseño
+------------------------------------------*/
+
+
+.btn-primary{background-color: #855F30 !important
+    ;}
+
+html{
+font-size: 16px;
+}
+body {
+
+  
+background-color:$azul !important;
+color: $gris !important;
+font-family: 'Roboto', sans-serif !important;
+}
+
+.btn-dark{background-color: #332718;}
+.card:hover {
+box-shadow: 0 0 11px #855F30;
+}
+.bg-primary {
+background-color: $azul !important;
+}
+footer{background-color:#9FBDCC ;}
+
+#imagenn:hover {
+    box-shadow: 0 0 10px #855F30;
+    }
+   
+.nav-link{color: white;}
+
+.nav-link:hover{color: dodgerblue;;}
+
+
+
+
+/*----------------------------------------
+Media Queries
+------------------------------------------*/
+@media (min-width: 768px) {
+html {
+font-size: 16px;
+}
+}
